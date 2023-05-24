@@ -1,0 +1,16 @@
+{
+    "Blogs": [
+        {
+            "title": "Go go AJ!",
+            "body": "I love aj so much lmao lorem dipshitdaaaaam",
+            "author": "mario",
+            "id": 1
+        },
+        {
+            "title": "Open fire mf!",
+            "body": "I love aj so much lmao lorem dipshit but sencodng dis time",
+            "author": "yoshi",
+            "id": 2
+        }
+    ]
+}
