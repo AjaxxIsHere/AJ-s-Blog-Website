@@ -1,4 +1,6 @@
-const BlogList = ({ blogs, title, /*handleDelete,*/ body }) => {
+import { Link } from "react-router-dom";
+
+const BlogList = ({ blogs, title, body }) => {
   return (
     <div className="blog-list">
       {/* Render the title */}
@@ -7,12 +9,17 @@ const BlogList = ({ blogs, title, /*handleDelete,*/ body }) => {
       {/* Iterate over the blogs array and render each blog */}
       {blogs.map(blog => (
         <div className="blog-preview" key={blog.id} >
-          {/* Render the blog's title */}
-          <h2>{ blog.title }</h2>
           
-          {/* Render the blog's author */}
-          <p>Written by { blog.author }</p>
-          <p>Info: {body}</p>
+          <Link to = {`/blogs/${blog.id}`}>  
+            {/* Render the blog's title */}
+            <h2>{ blog.title }</h2>
+            
+            {/* Render the blog's author */}
+            <p>Written by: <strong>{ blog.author }</strong></p>
+            <br></br>
+            {/*<p><strong>Info:</strong> {blog.body}</p>*/}
+          </Link>
+         
           
         </div>
       ))}

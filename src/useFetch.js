@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
-    
-    // State variable to store an array of blogs
-    const [data, setData] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
+  // State variable to store an array of blogs
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    // useEffect hook with an empty dependency array
-    useEffect(() => {
-        console.log("use effect ran");
-  
-    // Fetch data from url
-    // 'http://localhost:8000/Blogs'
+  // useEffect hook with an empty dependency array
+  useEffect(() => {
+    console.log("use effect ran");
 
-    fetch(url)
+    // Create a new AbortController instance
+    const abortCont = new AbortController();
+
+    // Fetch data from the specified URL
+    fetch(url, {signal: abortCont.signal })
       .then(res => {
         // Check if the response is not ok (e.g., status code >= 400)
         if (!res.ok) {
@@ -32,15 +32,26 @@ const useFetch = (url) => {
         setError(null);
       })
       .catch(error => {
-        // An error occurred during the fetching process
-        console.error('Error fetching data:', error);
-        // Update the state variables to reflect the error state
-        setIsLoading(false);
-        setError(error.message);
+        if (error.name === 'AbortError') {
+          // Fetch was aborted
+          console.log("Fetch Aborted");
+        }
+        else {
+          // An error occurred during the fetching process
+          console.error('Error! Fetching data:', error);
+          // Update the state variables to reflect the error state
+          setIsLoading(false);
+          setError(error.message);
+        }
       });
-  }, []);
 
-  return {data , isLoading, error}
+    // Clean up function to abort the fetch if the component is unmounted
+    return () => abortCont.abort();
+  }, [url]);
+
+  // Return the state variables as an object
+  return {data, isLoading, error};
 }
+
 
 export default useFetch;

@@ -1,16 +1,10 @@
 {
-    "Blogs": [
-        {
-            "title": "Go go AJ!",
-            "body": "I love aj so much lmao lorem dipshitdaaaaam",
-            "author": "mario",
-            "id": 1
-        },
-        {
-            "title": "Open fire mf!",
-            "body": "I love aj so much lmao lorem dipshit but sencodng dis time",
-            "author": "yoshi",
-            "id": 2
-        }
-    ]
+  "Blogs": [
+    {
+      "title": "Go go AJ!",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies ipsum eget metus ultricies, eget maximus odio laoreet. Sed nec felis et nisl eleifend semper. Integer bibendum varius eros, vel convallis lectus dignissim vitae. Quisque tempor tellus sit amet eros eleifend, et efficitur enim tincidunt. Nullam tincidunt, mauris in aliquet lacinia, risus justo consequat mauris, vel rutrum nisl neque nec velit. Maecenas bibendum eleifend sagittis. Suspendisse malesuada nisi eget sapien consectetur efficitur. Suspendisse at semper erat, euismod consectetur massa. In vitae turpis nunc. Nullam consequat purus eu velit pharetra pellentesque. Pellentesque in urna non risus pellentesque tristique. Mauris elementum vestibulum risus, sed pharetra dolor semper id. Cras malesuada quam nec dolor tempus, sed scelerisque leo condimentum. Aliquam condimentum tellus vitae nulla tincidunt, a venenatis leo semper. Nam vitae nunc finibus, bibendum velit vel, bibendum elit. Sed ac sapien sit amet tellus bibendum laoreet. Curabitur et neque in turpis eleifend luctus vitae id nisi. Vivamus rutrum ipsum sed elit vehicula, et auctor arcu consectetur. Nulla a tellus efficitur, facilisis metus ut, congue risus. Aenean at orci ac mauris vestibulum tempus. Curabitur eu purus ligula. Mauris dictum, sem eu gravida dapibus, enim arcu interdum est, eu semper felis odio id odio. Integer a justo id metus vulputate rutrum sed nec tortor.",
+      "author": "Mario",
+      "id": 1
+    }
+  ]
 }
